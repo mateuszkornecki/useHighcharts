@@ -1,13 +1,19 @@
-import React from 'react'
+import React from "react";
+import * as Highcharts from 'highcharts';
+import useHighcharts from 'use-highcharts';
 
-import { useMyHook } from 'usehighcharts'
+export default function App() {
+    const chartContainer = React.useRef(null);
+    const chart = useHighcharts(Highcharts, chartContainer, {
+        series: [{data: Array(25).fill(null).map(() => Math.random() * 10)}]
+    });
 
-const App = () => {
-  const example = useMyHook()
-  return (
-    <div>
-      {example}
-    </div>
-  )
+    return (
+        <>
+            <div ref={chartContainer} id="chart"/>
+            <button onClick={() => chart.series[0].addPoint(Math.random())}> Add random point</button>
+            <button onClick={() => chart.xAxis[0].setExtremes(10, 15)}>Set extremes</button>
+            <button onClick={() => chart.xAxis[0].setExtremes()}>Reset extremes</button>
+        </>
+    );
 }
-export default App

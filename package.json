@@ -1,10 +1,10 @@
 {
-  "name": "usehighcharts",
-  "version": "1.0.0",
+  "name": "use-highcharts",
+  "version": "0.0.2",
   "description": "",
   "author": "mateuszkornecki",
   "license": "MIT",
-  "repository": "(mateuszkornecki/useHighcharts)",
+  "repository": "mateuszkornecki/useHighcharts",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",

@@ -1,23 +1,11 @@
-import * as React from 'react';
+import React from 'react';
 
-export const useMyHook = () => {
-  let [{
-    counter
-  }, setState] = React.useState<{
-    counter: number;
-  }>({
-    counter: 0
-  });
+export default function useHighcharts(Highcharts: any, chartContainerRef: any, initialChartOptions: any) {
+    const [chart, setChart] = React.useState(null)
 
-  React.useEffect(() => {
-    let interval = window.setInterval(() => {
-      counter++;
-      setState({counter})
-    }, 1000)
-    return () => {
-      window.clearInterval(interval);
-    };
-  }, []);
+    React.useEffect(() => {
+        setChart(Highcharts.chart(chartContainerRef.current, initialChartOptions));
+    }, []);
 
-  return counter;
-};
+    return chart
+}
