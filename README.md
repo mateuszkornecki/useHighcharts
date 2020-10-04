@@ -1,6 +1,6 @@
 # useHighcharts
 
-[![NPM](https://img.shields.io/npm/v/usehighcharts.svg)](https://www.npmjs.com/package/use-highcharts) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/use-highcharts.svg)](https://www.npmjs.com/package/use-highcharts) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
@@ -9,6 +9,13 @@ npm install --save use-highcharts
 ```
 
 ## Usage
+
+To use the `useHighcharts` hook you need just three things: 
+- `Highcharts` instance
+- references to the container that will be used to render your chart
+- object that will contain chart options <br>
+
+... and that's it, now you can use `Highcharts` with `React` in the same way as you did in the vanilla js.
 
 ```tsx
 import React from "react";
