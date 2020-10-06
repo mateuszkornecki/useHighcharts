@@ -20,7 +20,7 @@ To use the `useHighcharts` hook you need just three things:
 ```tsx
 import React from "react";
 import * as Highcharts from 'highcharts';
-import useHighcharts from './useHighcharts';
+import useHighcharts from 'use-highcharts';
 
 export default function App() {
   const chartContainer = React.useRef(null);
